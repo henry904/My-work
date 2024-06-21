@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!----top navbar initial hidden will displayed for small screen (mobile)---->
+   <div class="topnav">
+    <div class="logo">
+        <h2>Henry Anderson</h2>
+    </div>
+    <div class="social-links">
+        <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+    </div>
+    <div class="menu-icon">
+        <i class='bx bx-menu'></i>
+    </div>
+    <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+   </div> 
+   <div class="header">
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="profile.jpg" alt="" style="height: 150px;width: 150px;">
+                <h2>Henry Anderson</h2>
+            </div>
+            <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+            </ul>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h4>Welcome</h4>
+            <h1>I'm <span class="input"></span></h1>
+            <h4>Based in Ghana,Accra.</h4>
+            <a href="#" class="btn">Hire Me</a>
+        </div>
+   </div>
+</div>
+
+<!-------------about------------>
+<div id="about">
+<div class="container">
+<div class="row">
+            <div class="about-col-1">
+                <img src="henry.jpg" alt="" width="30%" height="70%">
+            </div>
+       <div class="about-col-2">    
+    <h1 class="sub-title">ABOUT ME</h1>
+    <p class="hen">I am a creative designer and developer,who aims to work with small businesses and marginalized communities to bring their passions to life.I offer both design and development services of web applications or websites!Level up you coding skills:learn more about javascript and C++</p>
+    
+    <div class="tab-titles-contents">
+        <h2 class="andy">WHAT I DO</h2>
+    <ul class="hen">
+    <li>Designed and developed a responsive e-commerce website for a fashion brand using Html and Css resulting in a 50% increase in sales</li>
+    <li>Created a mobile friendly web application using javascript with a user-friendly interface and real-time data updates</li>
+    <li>Collaborated with a team to design and develop a cloud-based project management tool using javascript</li>
+    <li>Designed a flyer for a church for adverisement</li>
+    <li>Designed and developed a custom theme for popular CMS,with a modern and responsive design,and improved user experience</li>
+    </ul>   
+    </div> 
+    </div> 
+    </div>
+</div>
+</div>
+
+
+
+<!----applying typing effect for the title content-->
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js></script>
+    <script>
+       var typed=new Typed(".input",{
+        strings:["Henry Anderson", "A UX Designer", "A Web Developer","A Graphic Designer"],
+        typeSpeed:65,
+        backSpeed:55,
+        loop:true
+    }) 
+    /*displaying topnavbar on small screen size***/
+    let menuicon=document.querySelector(".menu-icon");
+    let navbar=document.querySelector(".navbar");
+    let icon=document.querySelector(".menu-icon");
+
+    menuicon.addEventListener("click",function(){
+        navbar.classList.toggle("open");
+        if(icon.classList.contains("fa-bars"))
+        {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+        }
+        else{
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+        }
+    })
+    </script>
+    <!-------contact----------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p class="me"><i class='bx bx-paper-plane'></i>Henryanderson402@gmail.com</p>
+                <p class="me"><i class='bx bxs-phone'></i>+233 542 795 283</p>
+                <div class='social-icons'>
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+               </div>
+            </div>
+        </div>
+    </div>
+    
+ </div>
+
+ <section class="contact2" id="contact2">
+    <form action="#">
+    <div class="input-box">
+     <input type="text" placeholder="Full Name">
+     <input type="email" placeholder="Email Address">
+    </div>
+     <div class="input-box">
+     <input type="number" placeholder="Mobile Number">
+    <input type="text" placeholder="Email subject">
+    </div>
+     <textarea name="" id="" cols="30" rows="10" placeholder="Input Your Message"></textarea>
+    <input type="submit" value="Send Message" class="btn">
+  </form>
+</section>
+    
+
+ <div class="Copyright">
+    <p>Copyright @ Henry. Made <i class=></i> by Henry</p>
+</div>
+</body>
+</html>
